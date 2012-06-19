@@ -13,9 +13,18 @@ function pro_101_blog_feature_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_blog';
-  $strongarm->value = 'edit-xmlsitemap';
-  $export['additional_settings__active_tab_blog'] = $strongarm;
+  $strongarm->name = 'contentanalysis_blog';
+  $strongarm->value = array(
+    0 => 'enable',
+  );
+  $export['contentanalysis_blog'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'contentanalysis_type_blog_enable';
+  $strongarm->value = 1;
+  $export['contentanalysis_type_blog_enable'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
