@@ -54,4 +54,5 @@ features[variable][] = rh_taxonomy_term_redirect_tags
 features[variable][] = save_continue_blog
 features[variable][] = show_diff_inline_blog
 features[variable][] = show_preview_changes_blog
+features[variable][] = xmlsitemap_settings_node_blog
 features[views_view][] = blog
