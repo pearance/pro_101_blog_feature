@@ -13,7 +13,6 @@ dependencies[] = image
 dependencies[] = media
 dependencies[] = strongarm
 dependencies[] = taxonomy
-dependencies[] = uuid
 dependencies[] = views
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
