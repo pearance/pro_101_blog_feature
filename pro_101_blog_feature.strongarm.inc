@@ -64,7 +64,14 @@ function pro_101_blog_feature_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'facebook_comments' => array(
+          'teaser' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__blog'] = $strongarm;
