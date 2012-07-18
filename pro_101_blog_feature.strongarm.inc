@@ -114,9 +114,39 @@ function pro_101_blog_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_blog';
+  $strongarm->value = '0';
+  $export['nodeblock_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_comment_link_blog';
+  $strongarm->value = '0';
+  $export['nodeblock_comment_link_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_node_link_blog';
+  $strongarm->value = '0';
+  $export['nodeblock_node_link_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_view_mode_blog';
+  $strongarm->value = 'full';
+  $export['nodeblock_view_mode_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_blog';
   $strongarm->value = array(
-    0 => 'status',
+    0 => 'promote',
+    1 => 'moderation',
+    2 => 'revision',
   );
   $export['node_options_blog'] = $strongarm;
 
@@ -210,6 +240,13 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->name = 'show_preview_changes_blog';
   $strongarm->value = 1;
   $export['show_preview_changes_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_blog';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_blog'] = $strongarm;
 
   return $export;
 }
