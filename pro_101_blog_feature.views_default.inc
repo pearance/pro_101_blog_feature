@@ -22,7 +22,7 @@ function pro_101_blog_feature_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Blog About Author Block';
+  $handler->display->display_options['title'] = 'Blog';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -32,6 +32,11 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Footer: Entity: Rendered entity */
+  $handler->display->display_options['footer']['entity']['id'] = 'entity';
+  $handler->display->display_options['footer']['entity']['table'] = 'entity__global';
+  $handler->display->display_options['footer']['entity']['field'] = 'entity';
+  $handler->display->display_options['footer']['entity']['empty'] = FALSE;
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -109,18 +114,6 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Blog';
   $handler->display->display_options['menu']['name'] = 'main-menu';
-
-  /* Display: Feed */
-  $handler = $view->new_display('feed', 'Feed', 'blog_feed');
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['style_plugin'] = 'rss';
-  $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['row_options']['links'] = 1;
-  $handler->display->display_options['path'] = 'blog/feed';
-  $handler->display->display_options['displays'] = array(
-    'default' => 'default',
-    'page' => 'page',
-  );
   $export['blog'] = $view;
 
   return $export;

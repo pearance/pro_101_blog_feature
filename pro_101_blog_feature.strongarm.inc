@@ -63,12 +63,23 @@ function pro_101_blog_feature_strongarm() {
         'redirect' => array(
           'weight' => '5',
         ),
+        'metatags' => array(
+          'weight' => '10',
+        ),
       ),
       'display' => array(
         'facebook_comments' => array(
           'teaser' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'rss' => array(
             'weight' => '3',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '5',
+            'visible' => TRUE,
           ),
         ),
       ),
