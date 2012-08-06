@@ -178,7 +178,7 @@ function pro_101_blog_feature_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_blog_tags',
-      'label' => 'Blog Tags',
+      'label' => 'Tags',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -416,8 +416,8 @@ function pro_101_blog_feature_field_default_fields() {
   t(' Tags are labels or keywords that help you classify your post. Making it easier for your visitors to sort by topic.');
   t('Blog Image');
   t('Blog Post');
-  t('Blog Tags');
   t('Downloads');
+  t('Tags');
 
   return $fields;
 }
