@@ -209,6 +209,62 @@ function pro_101_blog_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_blog_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Blog Title',
+    ),
+    'additional_settings' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Vertical tabs',
+      'hidden' => 0,
+    ),
+    'actions' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Save',
+      'hidden' => 0,
+    ),
+    'body' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Blog Post',
+      'hidden' => 0,
+    ),
+    'field_blog_tags' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Tags',
+      'hidden' => 0,
+    ),
+    'field_files' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Downloads',
+      'hidden' => 0,
+    ),
+    'field_title_graphic' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Blog Image',
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_blog_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_blog';
   $strongarm->value = array(
     0 => 'promote',
