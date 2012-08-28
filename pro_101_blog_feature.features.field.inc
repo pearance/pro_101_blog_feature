@@ -50,9 +50,8 @@ function pro_101_blog_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '0',
         ),
         'full' => array(
@@ -150,9 +149,8 @@ function pro_101_blog_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'inline',
-          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'full' => array(
@@ -235,9 +233,8 @@ function pro_101_blog_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'file',
           'settings' => array(),
-          'type' => 'file_default',
+          'type' => 'hidden',
           'weight' => '3',
         ),
         'full' => array(
@@ -324,12 +321,8 @@ function pro_101_blog_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'medium',
-          ),
-          'type' => 'image',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '1',
         ),
         'full' => array(
@@ -370,7 +363,7 @@ function pro_101_blog_feature_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
-        'default_image' => 0,
+        'default_image' => '3',
         'file_directory' => 'images/blog',
         'file_extensions' => 'png gif jpg jpeg svg',
         'max_filesize' => '',
@@ -391,14 +384,13 @@ function pro_101_blog_feature_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
-            'audio' => 0,
             0 => 0,
+            'audio' => 0,
             'default' => 0,
             'image' => 'image',
             'video' => 0,
           ),
           'browser_plugins' => array(
-            'library' => 0,
             'media_default--media_browser_1' => 'media_default--media_browser_1',
             'media_default--media_browser_my_files' => 0,
             'media_internet' => 'media_internet',

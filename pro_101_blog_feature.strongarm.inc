@@ -82,6 +82,16 @@ function pro_101_blog_feature_strongarm() {
             'visible' => TRUE,
           ),
         ),
+        'flippy_pager' => array(
+          'teaser' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '5',
+            'visible' => FALSE,
+          ),
+        ),
       ),
     ),
   );
