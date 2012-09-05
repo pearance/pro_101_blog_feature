@@ -10,6 +10,16 @@
 function pro_101_blog_feature_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: administer tags vocabulary terms.
+  $permissions['administer tags vocabulary terms'] = array(
+    'name' => 'administer tags vocabulary terms',
+    'roles' => array(
+      0 => 'developer',
+      1 => 'support',
+    ),
+    'module' => 'vppr',
+  );
+
   // Exported permission: create blog content.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
