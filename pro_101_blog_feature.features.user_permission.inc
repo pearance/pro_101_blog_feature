@@ -58,7 +58,7 @@ function pro_101_blog_feature_user_default_permissions() {
   $permissions['delete terms in tags'] = array(
     'name' => 'delete terms in tags',
     'roles' => array(
-      0 => 'professional',
+      0 => 'developer',
       1 => 'support',
     ),
     'module' => 'taxonomy',
@@ -112,7 +112,7 @@ function pro_101_blog_feature_user_default_permissions() {
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
     'roles' => array(
-      0 => 'professional',
+      0 => 'developer',
       1 => 'support',
     ),
     'module' => 'taxonomy',
