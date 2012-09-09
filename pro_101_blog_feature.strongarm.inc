@@ -51,6 +51,9 @@ function pro_101_blog_feature_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -64,7 +67,7 @@ function pro_101_blog_feature_strongarm() {
           'weight' => '5',
         ),
         'metatags' => array(
-          'weight' => '10',
+          'weight' => '7',
         ),
       ),
       'display' => array(
@@ -229,42 +232,42 @@ function pro_101_blog_feature_strongarm() {
     ),
     'additional_settings' => array(
       'region' => 'right',
-      'weight' => '6',
+      'weight' => '1',
       'has_required' => FALSE,
-      'title' => 'Vertical tabs',
+      'title' => NULL,
       'hidden' => 0,
     ),
     'actions' => array(
-      'region' => 'main',
-      'weight' => '5',
+      'region' => 'right',
+      'weight' => '0',
       'has_required' => FALSE,
       'title' => 'Save',
       'hidden' => 0,
     ),
     'body' => array(
       'region' => 'main',
-      'weight' => '1',
+      'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Blog Post',
       'hidden' => 0,
     ),
     'field_blog_tags' => array(
-      'region' => 'main',
-      'weight' => '3',
+      'region' => 'right',
+      'weight' => '2',
       'has_required' => FALSE,
       'title' => 'Tags',
       'hidden' => 0,
     ),
     'field_files' => array(
-      'region' => 'main',
-      'weight' => '4',
+      'region' => 'right',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Downloads',
       'hidden' => 0,
     ),
     'field_title_graphic' => array(
       'region' => 'main',
-      'weight' => '2',
+      'weight' => '1',
       'has_required' => FALSE,
       'title' => 'Blog Image',
       'hidden' => 0,
