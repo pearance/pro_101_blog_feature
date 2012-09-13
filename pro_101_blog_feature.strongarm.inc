@@ -252,18 +252,19 @@ function pro_101_blog_feature_strongarm() {
       'hidden' => 0,
     ),
     'field_blog_tags' => array(
-      'region' => 'right',
-      'weight' => '2',
+      'region' => 'main',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => 'Tags',
       'hidden' => 0,
     ),
     'field_files' => array(
-      'region' => 'right',
-      'weight' => '3',
+      'region' => 'main',
+      'weight' => '4',
       'has_required' => FALSE,
       'title' => 'Downloads',
       'hidden' => 0,
+      'collapsed' => 0,
     ),
     'field_title_graphic' => array(
       'region' => 'main',
