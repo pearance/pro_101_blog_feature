@@ -111,6 +111,7 @@ function pro_101_blog_feature_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'blog_page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'blog';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Blog';
