@@ -29,6 +29,48 @@ function pro_101_blog_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_blog';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_diff_inline_node_blog';
+  $strongarm->value = 0;
+  $export['diff_show_diff_inline_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_blog';
+  $strongarm->value = 0;
+  $export['diff_show_preview_changes_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_inline_node_blog';
+  $strongarm->value = 'diff_complete';
+  $export['diff_view_mode_inline_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_blog';
+  $strongarm->value = 'diff_complete';
+  $export['diff_view_mode_preview_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_standard_node_blog';
+  $strongarm->value = 1;
+  $export['diff_view_mode_standard_node_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'enable_revisions_page_blog';
   $strongarm->value = 1;
   $export['enable_revisions_page_blog'] = $strongarm;
