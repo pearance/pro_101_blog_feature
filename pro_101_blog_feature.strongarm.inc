@@ -402,6 +402,13 @@ function pro_101_blog_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'savedraft_blog';
+  $strongarm->value = '0';
+  $export['savedraft_blog'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_blog';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_blog'] = $strongarm;

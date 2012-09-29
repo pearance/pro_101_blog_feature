@@ -75,6 +75,7 @@ features[variable][] = rh_taxonomy_term_action_tags
 features[variable][] = rh_taxonomy_term_redirect_response_tags
 features[variable][] = rh_taxonomy_term_redirect_tags
 features[variable][] = save_continue_blog
+features[variable][] = savedraft_blog
 features[variable][] = show_diff_inline_blog
 features[variable][] = show_preview_changes_blog
 features[variable][] = workbench_moderation_default_state_blog
