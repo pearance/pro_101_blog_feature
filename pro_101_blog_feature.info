@@ -6,6 +6,7 @@ php = 5.2.4
 version = 7.x-1.0
 project = pro_101_blog_feature
 dependencies[] = autocomplete_deluxe
+dependencies[] = cs_adaptive_image
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = field_permissions

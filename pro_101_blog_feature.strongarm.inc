@@ -96,6 +96,12 @@ function pro_101_blog_feature_strongarm() {
       'colorbox' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_complete' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -129,11 +135,19 @@ function pro_101_blog_feature_strongarm() {
         ),
         'flippy_pager' => array(
           'teaser' => array(
-            'weight' => '5',
-            'visible' => TRUE,
+            'weight' => '3',
+            'visible' => FALSE,
           ),
           'default' => array(
-            'weight' => '5',
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
+          'rss' => array(
+            'weight' => '3',
             'visible' => FALSE,
           ),
         ),
