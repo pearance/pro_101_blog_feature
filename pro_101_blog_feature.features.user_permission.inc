@@ -32,6 +32,16 @@ function pro_101_blog_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: create field_blog_tags.
+  $permissions['create field_blog_tags'] = array(
+    'name' => 'create field_blog_tags',
+    'roles' => array(
+      0 => 'developer',
+      1 => 'support',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: delete any blog content.
   $permissions['delete any blog content'] = array(
     'name' => 'delete any blog content',
@@ -74,6 +84,16 @@ function pro_101_blog_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit field_blog_tags.
+  $permissions['edit field_blog_tags'] = array(
+    'name' => 'edit field_blog_tags',
+    'roles' => array(
+      0 => 'developer',
+      1 => 'support',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit own blog content.
   $permissions['edit own blog content'] = array(
     'name' => 'edit own blog content',
@@ -86,6 +106,16 @@ function pro_101_blog_feature_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit own field_blog_tags.
+  $permissions['edit own field_blog_tags'] = array(
+    'name' => 'edit own field_blog_tags',
+    'roles' => array(
+      0 => 'developer',
+      1 => 'support',
+    ),
+    'module' => 'field_permissions',
+  );
+
   // Exported permission: edit terms in tags.
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
@@ -94,6 +124,32 @@ function pro_101_blog_feature_user_default_permissions() {
       1 => 'support',
     ),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: view field_blog_tags.
+  $permissions['view field_blog_tags'] = array(
+    'name' => 'view field_blog_tags',
+    'roles' => array(
+      0 => 'anonymous user',
+      1 => 'assistant',
+      2 => 'authenticated user',
+      3 => 'developer',
+      4 => 'professional',
+      5 => 'support',
+    ),
+    'module' => 'field_permissions',
+  );
+
+  // Exported permission: view own field_blog_tags.
+  $permissions['view own field_blog_tags'] = array(
+    'name' => 'view own field_blog_tags',
+    'roles' => array(
+      0 => 'authenticated user',
+      1 => 'developer',
+      2 => 'professional',
+      3 => 'support',
+    ),
+    'module' => 'field_permissions',
   );
 
   return $permissions;
