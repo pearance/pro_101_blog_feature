@@ -445,7 +445,7 @@ function pro_101_blog_feature_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg svg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
+        'min_resolution' => '140x140',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -461,11 +461,11 @@ function pro_101_blog_feature_field_default_fields() {
             'public' => 'public',
           ),
           'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
             'image' => 'image',
             'video' => 0,
             0 => 0,
-            'audio' => 0,
-            'default' => 0,
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 'media_default--media_browser_1',
