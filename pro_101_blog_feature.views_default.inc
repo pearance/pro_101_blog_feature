@@ -53,12 +53,10 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'created' => 'created',
     'realname_1' => 'realname_1',
-    'view_node' => 'view_node',
   );
   /* Footer: Entity: Rendered entity */
   $handler->display->display_options['footer']['entity']['id'] = 'entity';
@@ -163,6 +161,13 @@ function pro_101_blog_feature_views_default_views() {
       'fallback_style' => 'fluid-image',
     ),
   );
+  /* Field: ShareThis */
+  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
+  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['ui_name'] = 'ShareThis';
+  $handler->display->display_options['fields']['sharethis']['label'] = '';
+  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
   /* Field: Content */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -183,6 +188,7 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Posted';
   $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = '1';
   /* Field: Name */
   $handler->display->display_options['fields']['realname_1']['id'] = 'realname_1';
   $handler->display->display_options['fields']['realname_1']['table'] = 'realname';
@@ -197,6 +203,7 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['ui_name'] = 'More';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = '<a href="[view_node]">more</a><br clear="all">';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'more';
   $handler->display->display_options['fields']['view_node']['node_in_colorbox_width'] = '600';
