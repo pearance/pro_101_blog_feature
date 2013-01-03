@@ -82,13 +82,13 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'token' => array(
         'custom_settings' => FALSE,
@@ -100,6 +100,9 @@ function pro_101_blog_feature_strongarm() {
         'custom_settings' => FALSE,
       ),
       'diff_complete' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -135,12 +138,12 @@ function pro_101_blog_feature_strongarm() {
         ),
         'flippy_pager' => array(
           'teaser' => array(
-            'weight' => '3',
-            'visible' => FALSE,
+            'weight' => '10',
+            'visible' => TRUE,
           ),
           'default' => array(
             'weight' => '4',
-            'visible' => FALSE,
+            'visible' => TRUE,
           ),
           'full' => array(
             'weight' => '4',
