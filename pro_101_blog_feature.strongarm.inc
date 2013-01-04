@@ -142,7 +142,7 @@ function pro_101_blog_feature_strongarm() {
             'visible' => TRUE,
           ),
           'default' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => TRUE,
           ),
           'full' => array(

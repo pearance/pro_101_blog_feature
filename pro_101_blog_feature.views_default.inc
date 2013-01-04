@@ -58,10 +58,6 @@ function pro_101_blog_feature_views_default_views() {
     'created' => 'created',
     'realname_1' => 'realname_1',
   );
-  /* Footer: Entity: Rendered entity */
-  $handler->display->display_options['footer']['entity']['id'] = 'entity';
-  $handler->display->display_options['footer']['entity']['table'] = 'entity__global';
-  $handler->display->display_options['footer']['entity']['field'] = 'entity';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -180,15 +176,18 @@ function pro_101_blog_feature_views_default_views() {
     'trim_length' => '600',
   );
   /* Field: Post Date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'users';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['relationship'] = 'uid';
-  $handler->display->display_options['fields']['created']['ui_name'] = 'Post Date';
-  $handler->display->display_options['fields']['created']['label'] = 'Posted';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'time ago';
-  $handler->display->display_options['fields']['created']['custom_date_format'] = '1';
+  $handler->display->display_options['fields']['created_1']['id'] = 'created_1';
+  $handler->display->display_options['fields']['created_1']['table'] = 'node';
+  $handler->display->display_options['fields']['created_1']['field'] = 'created';
+  $handler->display->display_options['fields']['created_1']['ui_name'] = 'Post Date';
+  $handler->display->display_options['fields']['created_1']['label'] = 'Posted';
+  $handler->display->display_options['fields']['created_1']['element_type'] = '0';
+  $handler->display->display_options['fields']['created_1']['element_label_type'] = '0';
+  $handler->display->display_options['fields']['created_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_1']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['created_1']['element_wrapper_class'] = 'field-submitted';
+  $handler->display->display_options['fields']['created_1']['date_format'] = 'time ago';
+  $handler->display->display_options['fields']['created_1']['custom_date_format'] = '1';
   /* Field: Name */
   $handler->display->display_options['fields']['realname_1']['id'] = 'realname_1';
   $handler->display->display_options['fields']['realname_1']['table'] = 'realname';
@@ -197,6 +196,7 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['realname_1']['ui_name'] = 'Name';
   $handler->display->display_options['fields']['realname_1']['label'] = 'by';
   $handler->display->display_options['fields']['realname_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['realname_1']['element_wrapper_type'] = 'div';
   /* Field: More */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -208,6 +208,31 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['view_node']['text'] = 'more';
   $handler->display->display_options['fields']['view_node']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['view_node']['node_in_colorbox_height'] = '600';
+  /* Field: New Draft Link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['ui_name'] = 'New Draft Link';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_node']['text'] = 'New Draft';
+  /* Field: Global: Contextual Links */
+  $handler->display->display_options['fields']['contextual_links']['id'] = 'contextual_links';
+  $handler->display->display_options['fields']['contextual_links']['table'] = 'views';
+  $handler->display->display_options['fields']['contextual_links']['field'] = 'contextual_links';
+  $handler->display->display_options['fields']['contextual_links']['label'] = '';
+  $handler->display->display_options['fields']['contextual_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['contextual_links']['fields'] = array(
+    'edit_node' => 'edit_node',
+    'title' => 0,
+    'field_title_graphic' => 0,
+    'sharethis' => 0,
+    'body' => 0,
+    'created' => 0,
+    'realname_1' => 0,
+    'view_node' => 0,
+  );
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

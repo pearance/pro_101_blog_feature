@@ -59,7 +59,7 @@ function pro_101_blog_feature_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => '2',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -168,7 +168,7 @@ function pro_101_blog_feature_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'inline',
@@ -263,7 +263,7 @@ function pro_101_blog_feature_field_default_fields() {
           'module' => 'file',
           'settings' => array(),
           'type' => 'file_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'full' => array(
           'label' => 'above',
@@ -359,10 +359,10 @@ function pro_101_blog_feature_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'wide-image',
+            'image_style' => 'fluid-image',
           ),
           'type' => 'image',
-          'weight' => '0',
+          'weight' => '1',
         ),
         'full' => array(
           'label' => 'hidden',
