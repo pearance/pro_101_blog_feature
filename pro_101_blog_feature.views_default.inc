@@ -204,8 +204,9 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['view_node']['ui_name'] = 'More';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['alter']['text'] = '<a href="[view_node]">more</a><br clear="all">';
+  $handler->display->display_options['fields']['view_node']['element_class'] = 'button';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view_node']['text'] = 'more';
+  $handler->display->display_options['fields']['view_node']['text'] = 'More';
   $handler->display->display_options['fields']['view_node']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['view_node']['node_in_colorbox_height'] = '600';
   /* Field: New Draft Link */
