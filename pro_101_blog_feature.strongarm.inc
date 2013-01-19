@@ -82,10 +82,10 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -138,7 +138,7 @@ function pro_101_blog_feature_strongarm() {
         ),
         'flippy_pager' => array(
           'teaser' => array(
-            'weight' => '10',
+            'weight' => '4',
             'visible' => TRUE,
           ),
           'default' => array(

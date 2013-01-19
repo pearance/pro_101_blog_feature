@@ -53,11 +53,7 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'created' => 'created',
-    'realname_1' => 'realname_1',
-  );
+  $handler->display->display_options['row_plugin'] = 'node';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -77,6 +73,13 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  /* Field: ShareThis */
+  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
+  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['ui_name'] = 'ShareThis';
+  $handler->display->display_options['fields']['sharethis']['label'] = '';
+  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
   /* Field: Image */
   $handler->display->display_options['fields']['field_title_graphic']['id'] = 'field_title_graphic';
   $handler->display->display_options['fields']['field_title_graphic']['table'] = 'field_data_field_title_graphic';
@@ -157,13 +160,6 @@ function pro_101_blog_feature_views_default_views() {
       'fallback_style' => 'fluid-image',
     ),
   );
-  /* Field: ShareThis */
-  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
-  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['ui_name'] = 'ShareThis';
-  $handler->display->display_options['fields']['sharethis']['label'] = '';
-  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
   /* Field: Content */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
