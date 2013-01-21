@@ -337,7 +337,7 @@ function pro_101_blog_feature_field_default_fields() {
       'locked' => '0',
       'module' => 'image',
       'settings' => array(
-        'default_image' => '48',
+        'default_image' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -377,7 +377,7 @@ function pro_101_blog_feature_field_default_fields() {
           'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
-            'image_link' => 'content',
+            'image_link' => '',
             'image_style' => 'showcase-wide',
           ),
           'type' => 'image',

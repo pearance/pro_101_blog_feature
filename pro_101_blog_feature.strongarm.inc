@@ -58,7 +58,7 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'diff_view_mode_preview_node_blog';
-  $strongarm->value = 'diff_complete';
+  $strongarm->value = '';
   $export['diff_view_mode_preview_node_blog'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -198,7 +198,7 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_label_type_blog';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['flippy_label_type_blog'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -212,14 +212,14 @@ function pro_101_blog_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_next_label_blog';
-  $strongarm->value = 'Next';
+  $strongarm->value = '';
   $export['flippy_next_label_blog'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'flippy_prev_label_blog';
-  $strongarm->value = 'Previous';
+  $strongarm->value = '';
   $export['flippy_prev_label_blog'] = $strongarm;
 
   $strongarm = new stdClass();
