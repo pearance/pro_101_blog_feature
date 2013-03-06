@@ -9,10 +9,10 @@
  */
 function pro_101_blog_feature_taxonomy_default_vocabularies() {
   return array(
-    'tags' => array(
-      'name' => 'Tags',
-      'machine_name' => 'tags',
-      'description' => 'For tagging content as a means of classification.',
+    'specialties' => array(
+      'name' => 'Specialties',
+      'machine_name' => 'specialties',
+      'description' => '',
       'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '-10',

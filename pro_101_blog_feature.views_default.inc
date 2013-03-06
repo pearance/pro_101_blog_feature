@@ -54,6 +54,14 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
   /* Relationship: Content: Author */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
@@ -254,8 +262,8 @@ function pro_101_blog_feature_views_default_views() {
     'blog' => 'blog',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'blog_page');
+  /* Display: Blog Page */
+  $handler = $view->new_display('page', 'Blog Page', 'blog_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -267,7 +275,7 @@ function pro_101_blog_feature_views_default_views() {
   /* Display: Related Content Block */
   $handler = $view->new_display('block', 'Related Content Block', 'related_content_block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Similar Posts';
+  $handler->display->display_options['title'] = 'Related Posts';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -279,6 +287,39 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'tags' => 'tags',
+    'question_category' => 0,
+    'glossary' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['ui_name'] = 'Title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_class'] = 'node-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Has taxonomy term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
@@ -295,6 +336,7 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['reduce_duplicates'] = TRUE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
@@ -304,9 +346,11 @@ function pro_101_blog_feature_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['break_phrase'] = TRUE;
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
+  $handler->display->display_options['block_description'] = 'Related Content';
 
   /* Display: Latest Post Block */
   $handler = $view->new_display('block', 'Latest Post Block', 'latest_post_block');

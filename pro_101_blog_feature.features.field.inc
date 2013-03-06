@@ -56,9 +56,8 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'full' => array(
@@ -80,11 +79,19 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'teaser' => array(
           'label' => 'hidden',
-          'module' => 'text',
+          'module' => 'smart_trim',
           'settings' => array(
-            'trim_length' => '400',
+            'more_link' => '1',
+            'more_text' => 'More',
+            'summary_handler' => 'full',
+            'trim_length' => '425',
+            'trim_options' => array(
+              'text' => 'text',
+            ),
+            'trim_suffix' => '...',
+            'trim_type' => 'chars',
           ),
-          'type' => 'text_summary_or_trimmed',
+          'type' => 'smart_trim_format',
           'weight' => '1',
         ),
       ),
@@ -110,108 +117,6 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '2',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-blog-field_blog_tags'.
-  $fields['node-blog-field_blog_tags'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_blog_tags',
-      'field_permissions' => array(
-        'type' => '2',
-      ),
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'tags',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'blog',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => ' Tags are labels or keywords that help you classify your post. Making it easier for your visitors to sort by topic.',
-      'display' => array(
-        'colorbox' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'default' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
-        ),
-        'full' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
-        ),
-        'rss' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
-        ),
-        'teaser' => array(
-          'label' => 'inline',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => '2',
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_blog_tags',
-      'label' => 'Tags',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'autocomplete_deluxe',
-        'settings' => array(
-          'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
-          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-          'size' => '60',
-        ),
-        'type' => 'autocomplete_deluxe_taxonomy',
-        'weight' => '3',
       ),
     ),
   );
@@ -260,9 +165,8 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'default' => array(
           'label' => 'above',
-          'module' => 'file',
           'settings' => array(),
-          'type' => 'file_default',
+          'type' => 'hidden',
           'weight' => '4',
         ),
         'full' => array(
@@ -306,6 +210,92 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'type' => 'file_generic',
         'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-blog-field_specialties'.
+  $fields['node-blog-field_specialties'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_specialties',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'specialties',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'blog',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'inline',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '5',
+        ),
+        'full' => array(
+          'label' => 'inline',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '2',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '0',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_specialties',
+      'label' => 'Specialties',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'autocomplete_deluxe',
+        'settings' => array(
+          'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+          'limit' => '0',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'min_length' => '0',
+          'size' => '60',
+        ),
+        'type' => 'autocomplete_deluxe_taxonomy',
+        'weight' => '3',
       ),
     ),
   );
@@ -356,21 +346,8 @@ function pro_101_blog_feature_field_default_fields() {
         ),
         'default' => array(
           'label' => 'hidden',
-          'module' => 'cs_adaptive_image',
-          'settings' => array(
-            'image_link' => 'content',
-            'styles' => array(
-              'breakpoint_1' => '739',
-              'breakpoint_2' => '979',
-              'breakpoint_3' => '1219',
-              'fallback_style' => 'fluid-image',
-              'max_style' => 'wide-image',
-              'style_1' => 'fluid-image',
-              'style_2' => 'narrow-image',
-              'style_3' => 'normal-image',
-            ),
-          ),
-          'type' => 'cs_adaptive_image',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '1',
         ),
         'full' => array(
@@ -464,9 +441,19 @@ function pro_101_blog_feature_field_default_fields() {
           'manualcrop_instant_preview' => 1,
           'manualcrop_require_cropping' => array(
             'fluid-image' => 'fluid-image',
+            'normal-image' => 0,
+            'rectangular-image' => 0,
+            'thumbnail' => 0,
+            'thumbnail-image' => 0,
+            'thumbnail-mini' => 0,
           ),
           'manualcrop_styles_list' => array(
             'fluid-image' => 'fluid-image',
+            'normal-image' => 0,
+            'rectangular-image' => 0,
+            'thumbnail' => 0,
+            'thumbnail-image' => 0,
+            'thumbnail-mini' => 0,
           ),
           'manualcrop_styles_mode' => 'exclude',
           'manualcrop_thumblist' => 0,
@@ -481,11 +468,10 @@ function pro_101_blog_feature_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t(' Tags are labels or keywords that help you classify your post. Making it easier for your visitors to sort by topic.');
   t('Blog Image');
   t('Blog Post');
   t('Downloads');
-  t('Tags');
+  t('Specialties');
 
   return $fields;
 }
