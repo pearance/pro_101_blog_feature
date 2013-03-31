@@ -355,7 +355,7 @@ function pro_101_blog_feature_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => 'showcase-wide',
+            'image_style' => 'fluid-image',
           ),
           'type' => 'image',
           'weight' => '0',
@@ -422,9 +422,9 @@ function pro_101_blog_feature_field_default_fields() {
           'allowed_types' => array(
             'audio' => 0,
             'document' => 0,
+            0 => 0,
             'image' => 'image',
             'video' => 0,
-            0 => 0,
           ),
           'browser_plugins' => array(
             'media_default--media_browser_1' => 'media_default--media_browser_1',
